@@ -1,6 +1,48 @@
 {
-  "auth": {},
+  "auth": {
+    "userpool": {
+      "customAuth": false,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "userpoolCustomMessage",
+          "triggerProvider": "Cognito"
+        }
+      ],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
   "function": {
+    "userpoolCustomMessage": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "zalupa": {
       "build": true,
       "dependsOn": [],
@@ -9,6 +51,46 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_userpoolCustomMessage_EMAILMESSAGE": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "userpoolCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_userpoolCustomMessage_EMAILSUBJECT": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "userpoolCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_userpoolCustomMessage_REDIRECTURL": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "userpoolCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_userpoolCustomMessage_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "userpoolCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_userpoolCustomMessage_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "userpoolCustomMessage"
+        }
+      ]
+    },
     "AMPLIFY_function_zalupa_deploymentBucketName": {
       "usedBy": [
         {

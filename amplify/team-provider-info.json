@@ -9,14 +9,25 @@
       "UnauthRoleName": "amplify-amplifyproject-dev-186db-unauthRole",
       "StackName": "amplify-amplifyproject-dev-186db",
       "StackId": "arn:aws:cloudformation:eu-north-1:654654157040:stack/amplify-amplifyproject-dev-186db/ba2fffe0-4266-11ef-85fb-0aba6e2007ab",
-      "AmplifyAppId": "d2otkvnetxenjb"
+      "AmplifyAppId": "d2otkvnetxenjb",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-amplifyproject-dev-186db-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
       "function": {
         "zalupa": {
           "deploymentBucketName": "amplify-amplifyproject-dev-186db-deployment",
           "s3Key": "amplify-builds/zalupa-4454397465646b336c4f-build.zip"
+        },
+        "userpoolCustomMessage": {
+          "REDIRECTURL": "",
+          "EMAILSUBJECT": "",
+          "EMAILMESSAGE": "",
+          "deploymentBucketName": "amplify-amplifyproject-dev-186db-deployment",
+          "s3Key": "amplify-builds/userpoolCustomMessage-58666c422b536b65624b-build.zip"
         }
+      },
+      "auth": {
+        "userpool": {}
       }
     }
   }
