@@ -1,0 +1,29 @@
+{
+  "auth": {},
+  "function": {
+    "zalupa": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_zalupa_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "zalupa"
+        }
+      ]
+    },
+    "AMPLIFY_function_zalupa_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "zalupa"
+        }
+      ]
+    }
+  }
+}
